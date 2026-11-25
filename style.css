@@ -1,0 +1,108 @@
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    background-color: beige;
+    margin: 25px;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #12304a;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Headings */
+h2 {
+    color: #12304a;
+    text-align: center;
+}
+
+h3 {
+    color: #2878a5;
+}
+
+/* Sections */
+section {
+    margin: 25px 0;
+    padding: 10px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid gray;
+}
+
+/* Technologies list hover */
+li:hover {
+    color: #2878a5;
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+th {
+    background-color: #12304a;
+    color: white;
+}
+
+tr:hover {
+    background-color: lightblue;
+}
+
+/* Form inputs */
+input, select, textarea {
+    padding: 5px;
+    margin: 5px;
+}
+
+input:focus, textarea:focus, select:focus {
+    border: 2px solid #2878a5;
+}
+
+/* Submit and Reset buttons */
+input[type="submit"],
+input[type="reset"] {
+    background-color: #12304a;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #2878a5;
+}
+
+/* Contact section */
+#contact {
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #12304a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Horizontal line */
+hr {
+    border: 1px solid #cccccc;
+}

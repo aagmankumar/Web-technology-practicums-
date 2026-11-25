@@ -1,0 +1,548 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    background-color: beige;
+    margin: 25px;
+    line-height: 1.6;
+}
+/* Header */
+header {
+    background-color: #12304a;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+h2 {
+    color: #12304a;
+    text-align: center;
+}
+h3 {
+    color: #2878a5;
+}
+section {
+    margin: 25px 0;
+    padding: 10px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid gray;
+}
+li:hover {
+    color: #2878a5;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+th {
+    background-color: #12304a;
+    color: white;
+}
+tr:hover {
+    background-color: lightblue;
+}
+input, select, textarea {
+    padding: 5px;
+    margin: 5px;
+}
+input:focus, textarea:focus, select:focus {
+    border: 2px solid #2878a5;
+}
+input[type="submit"],
+input[type="reset"] {
+    background-color: #12304a;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #2878a5;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+nav a:hover {
+    background-color: #2878a5;
+    border-radius: 4px;
+}
+#contact {
+    text-align: center;
+}
+footer {
+    background-color: #12304a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+hr {
+    border: 1px solid #cccccc;
+}
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+}
+.service-static {
+    position: static;
+    background-color: #e4f3e8;
+    border-left: 5px solid #318451;
+    padding: 15px;
+    margin: 15px 0;
+}
+.service-relative {
+    position: relative;
+    left: 15px;
+    background-color: #fff1d6;
+    border-left: 5px solid #d58a18;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+/* Absolute Position */
+.service-absolute {
+    position: relative;
+    background-color: #e3effa;
+    border: 2px solid #2878a5;
+    padding: 35px 15px 15px;
+    margin: 15px 0;
+}
+
+.popular-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #12304a;
+    color: white;
+    padding: 5px 10px;
+}
+
+/* Sticky Position */
+.workflow {
+    background-color: #f0f6fb;
+    padding: 15px;
+    border: 1px solid #b8d0e2;
+    margin: 15px 0;
+}
+
+.workflow-sticky {
+    position: sticky;
+    top: 0;
+    background-color: #12304a;
+    color: white;
+    padding: 12px;
+    z-index: 10;
+}
+
+.workflow p {
+    padding: 10px;
+    border-bottom: 1px solid #c5d7e5;
+}
+
+/* Fixed Position */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #12304a;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.back-to-top:hover {
+    background-color: #2878a5;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .service-relative {
+        left: 0;
+    }
+
+    .popular-label {
+        font-size: 12px;
+    }
+
+    .workflow-sticky {
+        font-size: 14px;
+    }
+
+    .back-to-top {
+        right: 10px;
+        bottom: 10px;
+    }
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.gallery-item {
+    margin: 0;
+    background-color: #eaf5fc;
+    border: 1px solid #b8d5e8;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: none;
+    border-radius: 0;
+}
+.gallery-item figcaption {
+    padding: 12px;
+}
+.gallery-item h3 {
+    margin-top: 0;
+    color: #123b63;
+}
+.gallery-item p {
+    margin-bottom: 5px;
+}
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 200px;
+    }
+}
+/* Common responsive settings */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+audio {
+    max-width: 100%;
+}
+
+input[type="file"] {
+    max-width: 100%;
+}
+
+/* TABLET: 601px to 900px */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+
+    body {
+        margin: 18px;
+        font-size: 15px;
+    }
+
+    header {
+        padding: 12px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        padding: 8px;
+    }
+
+    section {
+        margin: 18px 0;
+        padding: 8px;
+    }
+
+    .service-relative {
+        left: 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #multimedia img,
+    #multimedia video,
+    #multimedia iframe {
+        width: 100%;
+    }
+
+    #request input[type="text"],
+    #request input[type="email"],
+    #request input[type="password"],
+    #request input[type="number"],
+    #request input[type="date"],
+    #request select,
+    #request textarea {
+        max-width: 100%;
+    }
+}
+
+/* MOBILE: 600px and below */
+@media screen and (max-width: 600px) {
+
+    body {
+        margin: 10px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    #head h1 {
+        font-size: 25px;
+    }
+
+    #head h3 {
+        font-size: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    section {
+        margin: 15px 0;
+        padding: 5px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    .service-relative {
+        left: 0;
+    }
+
+    .service-absolute {
+        padding: 40px 10px 10px;
+    }
+
+    .popular-label {
+        font-size: 11px;
+        padding: 4px 7px;
+    }
+
+    .workflow {
+        padding: 8px;
+    }
+
+    .workflow-sticky {
+        font-size: 12px;
+        padding: 8px;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .gallery-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    #multimedia img,
+    #multimedia video,
+    #multimedia iframe {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    #process table {
+        width: 100%;
+    }
+    #request input[type="text"],
+    #request input[type="email"],
+    #request input[type="password"],
+    #request input[type="number"],
+    #request input[type="date"],
+    #request select,
+    #request textarea {
+        width: 100%;
+        max-width: 100%;
+        margin: 5px 0;
+    }
+    #request textarea {
+        resize: vertical;
+    }
+    #request input[type="file"] {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .back-to-top {
+        right: 8px;
+        bottom: 8px;
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+    footer {
+        padding: 8px;
+    }
+}
+
+/* Practicum 9: CSS animations and interactive elements */
+.animation-services {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.animation-card {
+    background-color: #ffffff;
+    border: 1px solid #b8d5e8;
+    border-radius: 8px;
+    padding: 15px;
+    overflow: hidden;
+    transition: transform 0.35s, box-shadow 0.35s;
+    animation: cardAppear 0.8s ease both;
+}
+.animation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(18, 48, 74, 0.2);
+}
+.animation-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.4s, opacity 0.4s;
+}
+.animation-card:hover img {
+    transform: scale(1.04);
+    opacity: 0.85;
+}
+.animation-card button,
+.deployment-panel button,
+.animation-notice button {
+    background-color: #12304a;
+    color: white;
+    border: none;
+    padding: 9px 14px;
+    margin: 10px 5px 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.animation-card button:hover,
+.deployment-panel button:hover,
+.animation-notice button:hover {
+    background-color: #2878a5;
+    transform: translateY(-2px);
+}
+.animation-info {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #eaf5fc;
+    border-left: 4px solid #2878a5;
+    opacity: 0;
+}
+.animation-info.show {
+    display: block;
+    animation: infoAppear 0.45s ease forwards;
+}
+.deployment-panel,
+.animation-notice {
+    margin-top: 20px;
+    padding: 18px;
+    background-color: #eaf5fc;
+    border: 1px solid #b8d5e8;
+    border-radius: 8px;
+}
+.deployment-status {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #12304a;
+}
+.deployment-status.active {
+    color: #d58a18;
+    animation: statusPulse 1s infinite;
+}
+.deployment-status.success {
+    color: #23834b;
+    animation: infoAppear 0.5s ease;
+}
+#animationNotice {
+    display: none;
+    padding: 10px;
+    background-color: #e4f3e8;
+    border-left: 4px solid #318451;
+}
+#animationNotice.show {
+    display: block;
+    animation: infoAppear 0.5s ease;
+}
+@keyframes cardAppear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes infoAppear {
+    from { opacity: 0; transform: translateX(-12px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes statusPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+}
+@media (max-width: 900px) {
+    .animation-services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+    .animation-services { grid-template-columns: 1fr; }
+}
